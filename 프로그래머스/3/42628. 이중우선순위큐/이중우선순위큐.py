@@ -57,7 +57,10 @@
 
 #     return dpq.get_result()
 
-#최적화->
+# !최적화
+# entry 딕셔너리 사용 -> 	exist set으로 존재 여부 관리
+# sync_heaps()가 여러 번 호출됨	-> delete_max()와 delete_min()에서 즉시 동기화
+# 삭제 연산 후 entry를 감소시킴	-> exist.discard(num)로 간단하게 제거
 import heapq
 
 class DualPriorityQueue:
