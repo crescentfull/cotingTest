@@ -1,2 +1,2 @@
 def solution(num_str):
-    return sum(list(map(int, num_str[0:])))
+    return sum(map(int, num_str))
