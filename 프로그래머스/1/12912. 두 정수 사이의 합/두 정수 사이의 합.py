@@ -4,6 +4,4 @@ def solution(a, b):
         n = b
         b = a
         a = n
-    for i in range(a,b+1):
-         answer += i
-    return answer
+    return sum(range(a,b+1))
