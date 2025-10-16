@@ -1,11 +1,27 @@
 def solution(s):
-    # 대소문자 구분 없이 비교하기 위해 모두 소문자로 변환
+    answer = True
+    
     s = s.lower()
     
-    # 'p'와 'y'의 개수를 각각 센다
-    count_p = s.count('p')
-    count_y = s.count('y')
+    pCnt = 0
+    yCnt = 0
     
-    # 'p'의 개수와 'y'의 개수가 같으면 True, 다르면 False를 반환
-    answer = count_p == count_y
-    return answer
+    for i in s:
+        if i == 'p':
+            pCnt += 1
+        elif i == 'y':
+            yCnt += 1
+    
+    if pCnt != yCnt: 
+        return False
+        
+    # p의 개수
+    # y의 개수
+    
+    # p == y : True
+    # p != y : False
+    # p and y not in s : True
+    
+    
+
+    return True
